@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "my_bucket" {
 
   tags = {
     Name        = "terra-created-bucket"
-    Environment = "Test Lab"
+    Environment = "Dev Lab"
     Owner       = "shettyda"
   }
 
