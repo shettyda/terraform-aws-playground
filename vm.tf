@@ -92,18 +92,18 @@ resource "aws_route_table_association" "pri_rt_ast" {
 #creating Elastic IP userd for NAT GATEWAY
 
 resource "aws_eip" "eip" {
-  domain ="vpc"
+  domain = "vpc"
 }
 
 
 #Creating NAT Table
 
-resource "aws_nat_gateway" "nat_gw"{
+resource "aws_nat_gateway" "nat_gw" {
   allocation_id = aws_eip.eip.id
-  subnet_id = aws_subnet.pub_subnet.id
+  subnet_id     = aws_subnet.pub_subnet.id
 
   tags = {
-    Name ="Terra-Created-nat_gw"
+    Name = "Terra-Created-nat_gw"
   }
 }
   
